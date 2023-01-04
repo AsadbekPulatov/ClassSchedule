@@ -4,7 +4,7 @@
     <a href="{{ route('dashboard') }}" class="brand-link">
         <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">Student</span>
+        <span class="brand-text font-weight-light">Auditory</span>
     </a>
 
     <!-- Sidebar -->
@@ -50,6 +50,13 @@
                        class="nav-link @if(request()->routeIs('groups.index')) active @endif ">
                         <i class="fa fa-users nav-icon"></i>
                         <p>Guruhlar</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('days.index') }}"
+                       class="nav-link @if(request()->routeIs('days.index')) active @endif ">
+                        <i class="fa fa-users nav-icon"></i>
+                        <p>Kunlar</p>
                     </a>
                 </li>
                 <li class="nav-item">
