@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CopyController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\DayController;
@@ -27,6 +28,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::post('copy', [CopyController::class, 'copy'])->name('copy');
     Route::resource('groups', GroupController::class);
     Route::resource('rooms', RoomController::class);
     Route::resource('days', DayController::class);
