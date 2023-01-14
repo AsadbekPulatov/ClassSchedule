@@ -22,4 +22,14 @@ class Lesson extends Model
     {
         return $this->belongsTo(Room::class);
     }
+
+    public function day()
+    {
+        return $this->belongsTo(Day::class);
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
 }

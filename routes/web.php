@@ -28,6 +28,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get("/queue", [\App\Http\Controllers\QueueController::class, 'index'])->name("queue");
     Route::post('copy', [CopyController::class, 'copy'])->name('copy');
     Route::resource('groups', GroupController::class);
     Route::resource('rooms', RoomController::class);

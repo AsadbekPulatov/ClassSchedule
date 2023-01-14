@@ -25,8 +25,8 @@
 
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}"
-                       class="nav-link @if(request()->routeIs('dashboard')) active @endif ">
+                    <a href="{{ route('queue') }}"
+                       class="nav-link @if(request()->routeIs('queue')) active @endif ">
                         <i class="fa fa-users nav-icon"></i>
                         <p>Dashboard</p>
                     </a>
